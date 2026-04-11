@@ -1,0 +1,124 @@
+ 
+
+ .main-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+
+    /* LEGAL BLUR EFFECT */
+    filter: blur(18px); 
+    -webkit-filter: blur(18px); /* Για υποστήριξη σε Safari/Chrome */
+    
+    /* Επειδή το blur δημιουργεί "λευκές" άκρες, 
+       κάνουμε ένα μικρό scale για να γεμίσει το κάδρο */
+    transform: scale(1.05); 
+}
+ /* hero.css */
+
+.hero-section {
+    width: 100%;
+    position: relative;
+    background: #000;
+    line-height: 0; /* Important reset */
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+    /* Let the image define the aspect ratio (height: auto) */
+}
+
+.main-banner {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain; /* Ensures the whole image is visible */
+    
+    /* LEGAL BLUR EFFECT: 
+       This adds a 15px Gaussian blur to the actual image pixels.
+       This legally prevents the recognition of individuals. */
+    filter: blur(15px);
+    -webkit-filter: blur(15px); /* Safari support */
+    
+    /* Scale slightly to hide any light edges caused by blur */
+    transform: scale(1.05);
+}
+
+/* Important: Re-add readability overlays OVER the blurred image */
+.hero-overlay-dark {
+    position: absolute;
+    inset: 0;
+    background: 
+        radial-gradient(circle at center, rgba(0,0,0,0) 0%, rgba(0,0,0,0.6) 80%),
+        linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.9) 100%);
+    z-index: 1;
+}
+
+/* Original Content Overlay (stays sharp) */
+.hero-overlay-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 2; /* Sits above the blurred image and dark overlay */
+    padding: 20px;
+}
+
+/* Original Text Styles (keep these for branding) */
+.established {
+    font-size: 10px;
+    letter-spacing: 4px;
+    color: #ff7828;
+    border: 1px solid rgba(255, 120, 40, 0.5);
+    padding: 4px 12px;
+    margin-bottom: 15px;
+    background: rgba(0,0,0,0.6);
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2rem, 8vw, 6rem); /* Slightly smaller max size for tighter fit */
+    line-height: 0.85;
+    color: #fff;
+    font-style: italic;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 10px rgba(0,0,0,1); /* Crucial for readability over faces */
+}
+
+.hero-title .highlight {
+    color: #ff7828;
+    font-style: normal;
+}
+
+.hero-subtitle {
+    margin-top: 15px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #ccc;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px rgba(0,0,0,1);
+}
+
+.hero-btn {
+    margin-top: 30px;
+    background: #ff7828;
+    color: #000;
+    border: none;
+    padding: 12px 35px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 11px;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #fff;
+    transform: scale(1.05);
+}

@@ -1,0 +1,39 @@
+ 
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap');
+
+body {
+    font-family: 'Outfit', sans-serif;
+}
+
+.article-body p {
+    margin-bottom: 1.5rem;
+}
+
+/* Εφέ για τις εικόνες μέσα στο κείμενο */
+.article-body img {
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 20px-50px rgba(0,0,0,0.5);
+}
+
+/* Styling για συνδέσμους μέσα στο κείμενο */
+.article-body a {
+    color: #ea580c; /* orange-600 */
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    font-weight: 600;
+}
+
+.article-body a:hover {
+    color: #fb923c; /* orange-400 */
+}
+
+/* Dropcap για το πρώτο γράμμα του άρθρου */
+.article-body > p:first-of-type::first-letter {
+    font-size: 4rem;
+    font-weight: 900;
+    float: left;
+    margin-right: 1rem;
+    line-height: 1;
+    color: #ea580c;
+}

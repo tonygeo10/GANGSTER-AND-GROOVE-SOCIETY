@@ -1,0 +1,105 @@
+ 
+ 
+ /* navbar.css */
+
+/* Reset & Global styles (Ensure these are present) */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background-color: #000;
+    color: #e0e0e0;
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Reduced height Nav Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px; /* Reduced vertical padding from 20px */
+    border-bottom: 1px solid #1a1a1a;
+    position: sticky;
+    top: 0;
+    background: rgba(0,0,0,0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    transition: padding 0.3s ease, background 0.3s ease;
+}
+
+/* Scroll Effect Class */
+.navbar.scrolled {
+    padding: 5px 40px;
+    background: rgba(0,0,0,0.98);
+}
+
+/* Reduced Logo and Text Size */
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between first and second logo */
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.logo-container:hover {
+    transform: scale(1.03);
+}
+
+/* Original GNG Logo */
+.logo-img {
+    height: 25px; /* Reduced from 40px-60px */
+    width: auto;
+    border-radius: 4px;
+}
+
+/* NEW: Retro Society Logo */
+.logo-retro-img {
+    height: 35px; /* Slightly larger to fit the text design */
+    width: auto;
+}
+
+.logo-text {
+    font-family: 'Space Mono', monospace;
+    font-size: 14px; /* Reduced from 18px+ */
+    font-weight: bold;
+    color: #ff7828;
+    letter-spacing: 1px;
+    display: none; /* Keep original text hidden unless wanted */
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 25px; /* Tighter gap */
+}
+
+.nav-link {
+    color: #a0a0a0;
+    text-transform: uppercase;
+    font-size: 11px; /* Smaller font size */
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 1px;
+    position: relative;
+    padding: 5px 0;
+}
+
+.nav-link:hover {
+    color: #fff;
+}
+
+/* Underline effect */
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ff7828;
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}

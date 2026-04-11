@@ -1,0 +1,144 @@
+
+
+
+ /* Custom Fonts & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.font-bebas {
+    font-family: 'Bebas Neue', cursive;
+}
+
+/* Gradients & Effects */
+.text-gradient {
+    background: linear-gradient(135deg, #ff7828 0%, #ff9555 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-blur {
+    background: linear-gradient(135deg, rgba(255, 120, 40, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
+}
+
+.section-divider {
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 120, 40, 0.5), transparent);
+    margin: 32px 0;
+}
+
+/* Card Effects */
+.card-glow {
+    position: relative;
+    overflow: hidden;
+}
+
+.card-glow::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 120, 40, 0.1), transparent);
+    transition: left 0.5s;
+}
+
+.card-glow:hover::before {
+    left: 100%;
+}
+
+.article-img {
+    background: linear-gradient(135deg, rgba(255, 120, 40, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
+    aspect-ratio: 16 / 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* Track List */
+.track-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.track-item:hover {
+    border-left-color: #ff7828;
+    background: rgba(255, 120, 40, 0.05);
+    transform: translateX(8px);
+}
+
+.track-number {
+    font-weight: 900;
+    font-size: 18px;
+    color: #ff7828;
+    min-width: 30px;
+}
+
+/* Animations */
+.fade-in {
+    animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pulse-orange {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(255, 120, 40, 0.4); }
+    50% { box-shadow: 0 0 0 10px rgba(255, 120, 40, 0); }
+}
+
+
+#music {
+    position: relative;
+    width: 100%;
+    /* Χρησιμοποιούμε aspect-ratio για να ακολουθεί το banner την αναλογία της εικόνας σου */
+    aspect-ratio: 1383 / 512; 
+    min-height: 350px; /* Ελάχιστο ύψος για να μη μικραίνει πολύ στα κινητά */
+    overflow: hidden;
+    background-color: #000;
+}
+
+.hero-bg-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    /* Το cover αναγκάζει την εικόνα να γεμίσει όλο το πλάτος και ύψος χωρίς κενά */
+    object-fit: cover; 
+    transform: translate(-50%, -50%) scale(1.02); /* Το scale 1.02 αφαιρεί τις λευκές γραμμές στις άκρες από το blur */
+    
+   
+
+
+
+

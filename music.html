@@ -1,0 +1,157 @@
+ <!doctype html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GNG Society - Η απόλυτη πηγή για την ελληνική Rap σκηνή, νέα tracks και playlists.">
+    <title>Music | GNG Society</title>
+    
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+    <script src="/_sdk/element_sdk.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/music.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body class="bg-black text-white overflow-x-hidden">
+    <div class="w-full h-full flex flex-col">
+        <main class="flex-1 w-full">
+    <header id="navbar" class="fixed top-0 w-full z-50 bg-black border-b border-white/5 h-20">
+       <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+           
+           <div class="flex items-center gap-3">
+               <a href="index.html" class="flex items-center gap-3 group transition-transform duration-200 active:scale-95">
+                   <img src="images/ggslogo.jpg" alt="GNG Logo" class="w-10 h-10 object-cover rounded-sm border border-white/10 group-hover:border-orange-500/50 transition-colors">
+                   <span class="font-['Space_Mono'] font-bold tracking-tighter text-lg text-white group-hover:text-orange-500 transition-colors">GNG SOCIETY</span>
+               </a>
+           </div>
+
+           <nav class="hidden md:flex items-center gap-8">
+               <a href="music.html" class="nav-link">Music</a>
+               <a href="games.html" class="nav-link">Games</a>
+               <a href="street-stories.html" class="nav-link">Street Stories</a>
+           </nav>
+           
+       </div>
+   </header>
+ 
+         <section id="music" class="w-full flex items-center justify-center">
+    <div class="absolute inset-0 z-0">
+        <img src="images/music.png" alt="Music Collage" class="hero-bg-image">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/80"></div>
+    </div>
+
+    <div class="relative z-10 text-center px-6">
+        <h1 class="font-bebas text-7xl md:text-9xl italic text-white tracking-tighter drop-shadow-lg">MUSIC</h1>
+        <p class="text-orange-500 font-bold tracking-[0.4em] text-xs uppercase">The Sound of the Streets</p>
+    </div>
+</section>
+
+            <div class="section-divider"></div>
+
+            <section class="w-full px-6 py-20">
+                <div class="max-w-7xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+                        
+                        <article class="card-glow group bg-gradient-to-br from-white/5 to-white/2 border border-white/10 rounded-lg overflow-hidden hover:border-orange-500/30 transition-all duration-500 fade-in">
+                            <div class="aspect-video overflow-hidden bg-gradient-to-br from-orange-600/20 to-black relative">
+                                <div class="absolute inset-0 article-img">🎤</div>
+                                <div class="absolute inset-0 group-hover:bg-black/30 transition-all duration-500"></div>
+                            </div>
+                            <div class="p-8">
+                                <span class="text-orange-500 text-xs font-bold uppercase tracking-widest block mb-3">Featured Release</span>
+                                <h2 id="featured-title" class="text-3xl font-bebas mb-4 tracking-wider text-white group-hover:text-orange-400 transition">ΤΟ ΝΕΟ TRACK ΤΗΣ ΕΒΔΟΜΑΔΑΣ</h2>
+                                <p id="featured-desc" class="text-gray-400 text-sm leading-relaxed mb-6">Μια σύντομη περιγραφή του άρθρου που βοηθάει το SEO.</p>
+                                <button class="group/btn inline-flex items-center gap-2 border-b-2 border-orange-500 pb-2 text-xs font-bold uppercase tracking-wider hover:text-orange-400 transition">
+                                    READ MORE <i data-lucide="arrow-right" width="16" height="16" class="group-hover/btn:translate-x-1 transition"></i>
+                                </button>
+                            </div>
+                        </article>
+
+                        <article class="card-glow bg-gradient-to-br from-white/5 to-white/2 border border-white/10 rounded-lg p-8 flex flex-col fade-in" style="animation-delay: 0.1s;">
+                            <span class="text-orange-500 text-xs font-bold uppercase tracking-widest block mb-3">Playlist</span>
+                            <h2 id="playlist-title" class="text-3xl font-bebas mb-8 text-white">GNG WEEKLY PLAYLIST</h2>
+                            <div class="flex-1 flex flex-col gap-4">
+                                <div class="track-item"><span class="track-number">01</span><div><p class="text-sm font-bold text-white">Σκληρή Πραγματικότητα</p><p class="text-xs text-gray-500">Artist A</p></div><i data-lucide="play" width="16" height="16" class="ml-auto text-orange-500 opacity-0 group-hover:opacity-100"></i></div>
+                                <div class="track-item"><span class="track-number">02</span><div><p class="text-sm font-bold text-white">Δρόμος της Νύχτας</p><p class="text-xs text-gray-500">Artist B</p></div><i data-lucide="play" width="16" height="16" class="ml-auto text-orange-500 opacity-0 group-hover:opacity-100"></i></div>
+                                <div class="track-item"><span class="track-number">03</span><div><p class="text-sm font-bold text-white">Αστικές Ιστορίες</p><p class="text-xs text-gray-500">Artist C</p></div><i data-lucide="play" width="16" height="16" class="ml-auto text-orange-500 opacity-0 group-hover:opacity-100"></i></div>
+                            </div>
+                        </article>
+
+                        <article class="lg:col-span-2 card-glow group bg-gradient-to-br from-white/5 to-white/2 border border-white/10 rounded-lg overflow-hidden fade-in hover:border-orange-500/30 transition-all duration-500" style="animation-delay: 0.2s;">
+                            <div class="grid md:grid-cols-2 gap-0 items-stretch">
+                                <div class="bg-gradient-to-br from-orange-600/20 to-black p-8 flex flex-col justify-center article-img text-6xl order-2 md:order-1 group-hover:scale-105 transition-transform duration-500">🎙️</div>
+                                <div class="p-8 flex flex-col justify-center order-1 md:order-2">
+                                    <span class="text-orange-500 text-xs font-bold uppercase tracking-widest block mb-3">Exclusive Interview</span>
+                                    <h2 id="interview-title" class="text-3xl font-bebas mb-4 tracking-wider text-white group-hover:text-orange-400 transition">Συνέντευξη με Θρύλο</h2>
+                                    <p id="interview-text" class="text-gray-400 text-sm leading-relaxed mb-6">Ένα βαθύ ντοκιμαντέρ με έναν από τους σημαντικότερους καλλιτέχνες.</p>
+                                    <button class="group/btn inline-flex items-center gap-2 border-b-2 border-orange-500 pb-2 text-xs font-bold uppercase tracking-wider w-fit hover:text-orange-400 transition">
+                                        WATCH INTERVIEW <i data-lucide="arrow-right" width="16" height="16" class="group-hover/btn:translate-x-1 transition"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <div class="section-divider"></div>
+
+            <section id="tracks" class="w-full px-6 py-20">
+                <div class="max-w-7xl mx-auto">
+                    <div class="mb-12">
+                        <p class="text-orange-500 text-xs font-bold uppercase tracking-widest mb-2">Fresh Drops</p>
+                        <h2 class="text-5xl font-bebas tracking-wider mb-4">Latest Tracks</h2>
+                        <div class="h-1 w-16 bg-gradient-to-r from-orange-500 to-transparent"></div>
+                    </div>
+                    <div class="space-y-8">
+                        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/..." width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </section>
+
+            <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-top">
+            <div class="footer-section brand-info">
+                <h2>GNG SOCIETY</h2>
+                <p>Gangster & Groove Culture</p>
+            </div>
+            
+            <div class="footer-section">
+                <div class="social-links">
+                    <a href="https://www.instagram.com/ggs_stories/" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@GangsterandGrooveSociety" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <i data-lucide="youtube"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@gngngrv_tv" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <svg class="tiktok-icon" viewBox="0 0 24 24">
+                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-section contact-info">
+                <a href="mailto:info@gngsociety.gr" class="contact-link">Contact Us</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2024 GANGSTER & GROOVE SOCIETY. ALL RIGHTS RESERVED.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+        </main>
+    </div>
+
+    <script src="animations.js"></script>
+</body>
+</html>

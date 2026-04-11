@@ -1,0 +1,166 @@
+ <!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GNG Society</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/element_sdk.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&amp;family=Outfit:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    .dropdown-panel { opacity: 0; visibility: hidden; transform: translateY(-4px); transition: all 0.2s ease; }
+    .dropdown-trigger:hover .dropdown-panel,
+    .dropdown-trigger:focus-within .dropdown-panel { opacity: 1; visibility: visible; transform: translateY(0); }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #ff7828; transition: width 0.25s ease; }
+    .nav-link:hover::after { width: 100%; }
+    .mobile-menu { transform: translateX(100%); transition: transform 0.3s ease; }
+    .mobile-menu.open { transform: translateX(0); }
+    .mobile-sub { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .mobile-sub.open { max-height: 300px; }
+    .hamburger { display: flex; flex-direction: column; gap: 5px; cursor: pointer; }
+    .hamburger span { width: 24px; height: 2px; background: #e0e0e0; transition: all 0.3s ease; border-radius: 2px; }
+    .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+    .hamburger:hover span { background: #ff7828; }
+  </style>
+  <style>body { box-sizing: border-box; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full w-full" style="background: #000000;">
+  <header id="navbar" style="background: #000000; border-bottom: 1px solid #1a1a1a;" class="w-full">
+   <div class="px-6 h-20 md:h-24 flex items-center justify-between md:grid md:grid-cols-3"><!-- Left Nav (Desktop) -->
+    <nav class="hidden md:flex items-center gap-8 justify-start" style="font-family: 'Outfit', sans-serif;">
+     <div class="dropdown-trigger relative"><button class="nav-link flex items-center gap-1 text-sm font-medium tracking-wide uppercase cursor-pointer bg-transparent border-none" style="color: #a0a0a0;" onmouseover="this.style.color='#e0e0e0'" onmouseout="this.style.color='#a0a0a0'"> <span id="music-label">Music</span> <i data-lucide="chevron-down" style="width:14px;height:14px;"></i> <style>.dropdown-trigger:nth-child(1) .nav-link::after{background:#ff7828}</style></button>
+      <div class="dropdown-panel absolute top-full left-0 mt-2 py-2 rounded-lg min-w-[160px] z-50" style="background: #111111; border: 1px solid #222;"><a href="/music/albums.html" class="block px-4 py-2 text-sm no-underline" style="color:#a0a0a0;" onmouseover="this.style.color='#ff7828';this.style.background='#1a1a1a'" onmouseout="this.style.color='#a0a0a0';this.style.background='transparent'">Albums</a> <a href="/music/reviews.html" class="block px-4 py-2 text-sm no-underline" style="color:#a0a0a0;" onmouseover="this.style.color='#ff7828';this.style.background='#1a1a1a'" onmouseout="this.style.color='#a0a0a0';this.style.background='transparent'">Reviews</a> <a href="/music/news.html" class="block px-4 py-2 text-sm no-underline" style="color:#a0a0a0;" onmouseover="this.style.color='#ff7828';this.style.background='#1a1a1a'" onmouseout="this.style.color='#a0a0a0';this.style.background='transparent'">News</a> <a href="/music/lives.html" class="block px-4 py-2 text-sm no-underline" style="color:#a0a0a0;" onmouseover="this.style.color='#ff7828';this.style.background='#1a1a1a'" onmouseout="this.style.color='#a0a0a0';this.style.background='transparent'">Lives</a> <a href="/music/stories.html" class="block px-4 py-2 text-sm no-underline" style="color:#a0a0a0;" onmouseover="this.style.color='#ff7828';this.style.background='#1a1a1a'" onmouseout="this.style.color='#a0a0a0';this.style.background='transparent'">Stories</a>
+      </div>
+     </div>
+     <div class="dropdown-trigger relative"><button class="nav-link flex items-center gap-1 text-sm font-medium tracking-wide uppercase cursor-pointer bg-transparent border-none" style="color: #a0a0a0;" onmouseover="this.style.color='#e0e0e0'" onmouseout="this.style.color='#a0a0a0'"> <span id="games-label">Games</span> <i data-lucide="chevron-down" style="width:14px;height:14px;"></i> <style>.dropdown-trigger:nth-child(2) .nav-link::after{background:#ff7828}</style></button>
+      <div class="dropdown-panel absolute top-full left-0 mt-2 py-2 rounded-lg min-w-[160px] z-50" style="background: #111111; border: 1px solid #222;"><a href="/games/news.html" class="block px-4 py-2 text-sm no-underline" style="color:#a0a0a0;" onmouseover="this.style.color='#ff7828';this.style.background='#1a1a1a'" onmouseout="this.style.color='#a0a0a0';this.style.background='transparent'">News</a> <a href="/games/reviews.html" class="block px-4 py-2 text-sm no-underline" style="color:#a0a0a0;" onmouseover="this.style.color='#ff7828';this.style.background='#1a1a1a'" onmouseout="this.style.color='#a0a0a0';this.style.background='transparent'">Reviews</a>
+      </div>
+     </div>
+    </nav><!-- Center Logo -->
+    <div class="flex justify-center items-center"><a href="/" class="flex items-center justify-center transition-transform hover:scale-105"> <img src="/images/ggslogo.png" alt="GNG Society" class="h-12 md:h-16 w-auto object-contain" id="logo-img" loading="lazy" onerror="console.error('Logo failed to load:', this.src); this.style.display='none'; document.getElementById('logo-text-fallback').style.display='block';"> <span id="logo-text-fallback" style="font-family: 'Space Mono', monospace; color: #e0e0e0; letter-spacing: 2px; font-weight: bold; display: none;" class="text-lg uppercase">GNG</span> <span id="logo-text" class="sr-only">GNG Society</span> </a>
+    </div><!-- Right Nav (Desktop) -->
+    <nav class="hidden md:flex items-center gap-8 justify-end" style="font-family: 'Outfit', sans-serif;">
+     <div class="dropdown-trigger relative"><button class="nav-link flex items-center gap-1 text-sm font-medium tracking-wide uppercase cursor-pointer bg-transparent border-none" style="color: #a0a0a0;" onmouseover="this.style.color='#e0e0e0'" onmouseout="this.style.color='#a0a0a0'"> <span id="cinema-label">Cinema</span> <i data-lucide="chevron-down" style="width:14px;height:14px;"></i> <style>.dropdown-trigger:nth-child(1) .nav-link::after{background:#ff7828}</style></button>
+      <div class="dropdown-panel absolute top-full right-0 mt-2 py-2 rounded-lg min-w-[160px] z-50" style="background: #111111; border: 1px solid #222;"><a href="/cinema/series.html" class="block px-4 py-2 text-sm no-underline" style="color:#a0a0a0;" onmouseover="this.style.color='#ff7828';this.style.background='#1a1a1a'" onmouseout="this.style.color='#a0a0a0';this.style.background='transparent'">Series</a> <a href="/cinema/movies.html" class="block px-4 py-2 text-sm no-underline" style="color:#a0a0a0;" onmouseover="this.style.color='#ff7828';this.style.background='#1a1a1a'" onmouseout="this.style.color='#a0a0a0';this.style.background='transparent'">Movies</a>
+      </div>
+     </div><a href="/street-stories.html" class="nav-link text-sm font-medium tracking-wide uppercase no-underline" style="color: #a0a0a0;" onmouseover="this.style.color='#e0e0e0'" onmouseout="this.style.color='#a0a0a0'"> <span id="street-label">Street Stories</span> <style>nav > a.nav-link::after{background:#ff7828}</style></a>
+    </nav><!-- Mobile Hamburger Toggle --> <button id="mobile-toggle" class="md:hidden bg-transparent border-none hamburger" style="color:#e0e0e0;" aria-label="Menu"> <span></span><span></span><span></span> </button>
+   </div>
+  </header><!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu fixed top-0 right-0 w-72 h-full z-50 md:hidden overflow-y-auto" style="background:#000000; border-left:1px solid #1a1a1a; font-family:'Outfit',sans-serif;">
+   <div class="flex items-center justify-between p-6"><span style="font-family:'Space Mono',monospace;color:#e0e0e0;letter-spacing:2px;" class="text-sm font-bold uppercase">Menu</span> <button id="mobile-close" class="bg-transparent border-none cursor-pointer hamburger" style="color:#e0e0e0;" aria-label="Close menu"> <span></span><span></span><span></span> </button>
+   </div>
+   <nav class="px-6 pb-6"><!-- Music -->
+    <div class="mb-2"><button class="mobile-section w-full flex items-center justify-between py-3 bg-transparent border-none cursor-pointer text-sm font-medium uppercase tracking-wide" style="color:#e0e0e0; border-bottom:1px solid #1a1a1a;" data-section="music"> <span id="mobile-music-label">Music</span> <span class="mobile-chevron" style="color:#ff7828;"><i data-lucide="chevron-down" style="width:16px;height:16px;"></i></span> </button>
+     <div class="mobile-sub" id="sub-music"><a href="/music/albums.html" class="block py-2 pl-4 text-sm no-underline" style="color:#a0a0a0;">Albums</a> <a href="/music/reviews.html" class="block py-2 pl-4 text-sm no-underline" style="color:#a0a0a0;">Reviews</a> <a href="/music/news.html" class="block py-2 pl-4 text-sm no-underline" style="color:#a0a0a0;">News</a> <a href="/music/lives.html" class="block py-2 pl-4 text-sm no-underline" style="color:#a0a0a0;">Lives</a> <a href="/music/stories.html" class="block py-2 pl-4 text-sm no-underline" style="color:#a0a0a0;">Stories</a>
+     </div>
+    </div><!-- Games -->
+    <div class="mb-2"><button class="mobile-section w-full flex items-center justify-between py-3 bg-transparent border-none cursor-pointer text-sm font-medium uppercase tracking-wide" style="color:#e0e0e0; border-bottom:1px solid #1a1a1a;" data-section="games"> <span id="mobile-games-label">Games</span> <span class="mobile-chevron" style="color:#ff7828;"><i data-lucide="chevron-down" style="width:16px;height:16px;"></i></span> </button>
+     <div class="mobile-sub" id="sub-games"><a href="/games/news.html" class="block py-2 pl-4 text-sm no-underline" style="color:#a0a0a0;">News</a> <a href="/games/reviews.html" class="block py-2 pl-4 text-sm no-underline" style="color:#a0a0a0;">Reviews</a>
+     </div>
+    </div><!-- Cinema -->
+    <div class="mb-2"><button class="mobile-section w-full flex items-center justify-between py-3 bg-transparent border-none cursor-pointer text-sm font-medium uppercase tracking-wide" style="color:#e0e0e0; border-bottom:1px solid #1a1a1a;" data-section="cinema"> <span id="mobile-cinema-label">Cinema</span> <span class="mobile-chevron" style="color:#ff7828;"><i data-lucide="chevron-down" style="width:16px;height:16px;"></i></span> </button>
+     <div class="mobile-sub" id="sub-cinema"><a href="/cinema/series.html" class="block py-2 pl-4 text-sm no-underline" style="color:#a0a0a0;">Series</a> <a href="/cinema/movies.html" class="block py-2 pl-4 text-sm no-underline" style="color:#a0a0a0;">Movies</a>
+     </div>
+    </div><!-- Street Stories --> <a href="/street-stories.html" class="block py-3 text-sm font-medium uppercase tracking-wide no-underline" style="color:#e0e0e0; border-bottom:1px solid #1a1a1a;" id="mobile-street-label">Street Stories</a>
+   </nav>
+  </div>
+  <div id="mobile-overlay" class="fixed inset-0 z-40 hidden md:hidden" style="background:rgba(0,0,0,0.6);"></div>
+  <script>
+    const defaultConfig = {
+      logo_text: 'GNG Society',
+      music_label: 'Music',
+      games_label: 'Games',
+      cinema_label: 'Cinema',
+      street_label: 'Street Stories',
+      background_color: '#000000',
+      surface_color: '#111111',
+      text_color: '#e0e0e0',
+      primary_action: '#ff7828',
+      secondary_action: '#a0a0a0',
+      font_family: 'Outfit',
+      font_size: 14
+    };
+
+    function applyConfig(config) {
+      const c = { ...defaultConfig, ...config };
+      document.body.style.background = c.background_color;
+      document.getElementById('navbar').style.background = c.background_color;
+      document.getElementById('navbar').style.borderColor = c.surface_color;
+      const fallback = document.getElementById('logo-text-fallback');
+      if (fallback) fallback.style.color = c.text_color;
+      
+      // Update category labels
+      document.getElementById('music-label').textContent = c.music_label;
+      document.getElementById('games-label').textContent = c.games_label;
+      document.getElementById('cinema-label').textContent = c.cinema_label;
+      document.getElementById('street-label').textContent = c.street_label;
+      document.getElementById('mobile-music-label').textContent = c.music_label;
+      document.getElementById('mobile-games-label').textContent = c.games_label;
+      document.getElementById('mobile-cinema-label').textContent = c.cinema_label;
+      document.getElementById('mobile-street-label').textContent = c.street_label;
+      
+      document.querySelectorAll('.dropdown-panel').forEach(p => {
+        p.style.background = c.surface_color;
+        p.style.borderColor = c.surface_color;
+      });
+    }
+
+    // Mobile menu
+    document.getElementById('mobile-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.add('open');
+      document.getElementById('mobile-overlay').classList.remove('hidden');
+      document.getElementById('mobile-toggle').classList.add('open');
+    });
+    function closeMobile() {
+      document.getElementById('mobile-menu').classList.remove('open');
+      document.getElementById('mobile-overlay').classList.add('hidden');
+      document.getElementById('mobile-toggle').classList.remove('open');
+    }
+    document.getElementById('mobile-close').addEventListener('click', closeMobile);
+    document.getElementById('mobile-overlay').addEventListener('click', closeMobile);
+
+    document.querySelectorAll('.mobile-section').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const section = btn.dataset.section;
+        const sub = document.getElementById('sub-' + section);
+        sub.classList.toggle('open');
+      });
+    });
+
+    // Element SDK
+    window.elementSdk.init({
+      defaultConfig,
+      onConfigChange: async (config) => applyConfig(config),
+      mapToCapabilities: (config) => ({
+        recolorables: [
+          { get: () => config.background_color || defaultConfig.background_color, set: (v) => { config.background_color = v; window.elementSdk.setConfig({ background_color: v }); } },
+          { get: () => config.surface_color || defaultConfig.surface_color, set: (v) => { config.surface_color = v; window.elementSdk.setConfig({ surface_color: v }); } },
+          { get: () => config.text_color || defaultConfig.text_color, set: (v) => { config.text_color = v; window.elementSdk.setConfig({ text_color: v }); } },
+          { get: () => config.primary_action || defaultConfig.primary_action, set: (v) => { config.primary_action = v; window.elementSdk.setConfig({ primary_action: v }); } },
+          { get: () => config.secondary_action || defaultConfig.secondary_action, set: (v) => { config.secondary_action = v; window.elementSdk.setConfig({ secondary_action: v }); } }
+        ],
+        borderables: [],
+        fontEditable: { get: () => config.font_family || defaultConfig.font_family, set: (v) => { config.font_family = v; window.elementSdk.setConfig({ font_family: v }); } },
+        fontSizeable: { get: () => config.font_size || defaultConfig.font_size, set: (v) => { config.font_size = v; window.elementSdk.setConfig({ font_size: v }); } }
+      }),
+      mapToEditPanelValues: (config) => new Map([
+        ['logo_text', config.logo_text || defaultConfig.logo_text],
+        ['music_label', config.music_label || defaultConfig.music_label],
+        ['games_label', config.games_label || defaultConfig.games_label],
+        ['cinema_label', config.cinema_label || defaultConfig.cinema_label],
+        ['street_label', config.street_label || defaultConfig.street_label]
+      ])
+    });
+
+    applyConfig(defaultConfig);
+    lucide.createIcons();
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9ea2f10747ee1fff',t:'MTc3NTgzNjU4Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
