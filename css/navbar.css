@@ -103,3 +103,20 @@ body {
 .nav-link:hover::after {
     width: 100%;
 }
+
+
+
+
+/* Custom Desktop Link Styling */
+.nav-link {
+    @apply text-sm font-['Space_Mono'] font-medium text-white/70 hover:text-orange-500 transition-colors uppercase tracking-widest;
+}
+
+/* High-Impact Mobile Links */
+.mobile-link {
+    @apply text-6xl font-black text-black uppercase tracking-tighter transition-all duration-300;
+}
+
+.mobile-link:hover {
+    @apply italic translate-x-3;
+}
