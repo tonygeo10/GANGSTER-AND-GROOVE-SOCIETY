@@ -1,8 +1,6 @@
- 
- 
- /* navbar.css */
-
-/* Reset & Global styles (Ensure these are present) */
+   
+  
+  /* --- Global Styles --- */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
@@ -11,112 +9,105 @@ body {
     font-family: 'Outfit', sans-serif;
 }
 
-/* Reduced height Nav Bar */
-.navbar {
+/* --- Desktop Navbar --- */
+#navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* This pushes Logo left and Nav right */
     align-items: center;
-    padding: 10px 40px; /* Reduced vertical padding from 20px */
-    border-bottom: 1px solid #1a1a1a;
-    position: sticky;
-    top: 0;
-    background: rgba(0,0,0,0.95);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
-    z-index: 1000;
-    transition: padding 0.3s ease, background 0.3s ease;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 80px; 
+    /* Increased padding to 3rem (48px) for a "far" look without touching the screen edge */
+    padding: 0 3rem; 
 }
 
-/* Scroll Effect Class */
-.navbar.scrolled {
-    padding: 5px 40px;
-    background: rgba(0,0,0,0.98);
-}
-
-/* Reduced Logo and Text Size */
-.logo-container {
+/* Desktop Links Container */
+.nav-links-container {
     display: flex;
+    gap: 3rem; /* Space between the links on the right */
     align-items: center;
-    gap: 10px; /* Space between first and second logo */
-    text-decoration: none;
-    transition: transform 0.3s ease;
 }
 
-.logo-container:hover {
-    transform: scale(1.03);
-}
-
-/* Original GNG Logo */
-.logo-img {
-    height: 25px; /* Reduced from 40px-60px */
-    width: auto;
-    border-radius: 4px;
-}
-
-/* NEW: Retro Society Logo */
-.logo-retro-img {
-    height: 35px; /* Slightly larger to fit the text design */
-    width: auto;
-}
-
-.logo-text {
-    font-family: 'Space Mono', monospace;
-    font-size: 14px; /* Reduced from 18px+ */
-    font-weight: bold;
-    color: #ff7828;
-    letter-spacing: 1px;
-    display: none; /* Keep original text hidden unless wanted */
-}
-
-/* Navigation Links */
-.nav-links {
-    display: flex;
-    gap: 25px; /* Tighter gap */
-}
-
+/* Desktop Links */
 .nav-link {
-    color: #a0a0a0;
-    text-transform: uppercase;
-    font-size: 11px; /* Smaller font size */
+    font-family: 'Space Mono', monospace;
+    font-size: 0.875rem;
     font-weight: 500;
+    color: rgba(255, 255, 255, 0.7);
+    text-transform: uppercase;
     text-decoration: none;
-    letter-spacing: 1px;
-    position: relative;
-    padding: 5px 0;
+    transition: all 0.2s ease;
+    letter-spacing: 2px; /* Slightly wider tracking for that premium look */
 }
 
 .nav-link:hover {
-    color: #fff;
+    color: #ff7828; /* Brand Orange */
 }
 
-/* Underline effect */
-.nav-link::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #ff7828;
-    transition: width 0.3s;
+/* --- Mobile Menu Panel --- */
+#mobile-menu {
+    background-color: #ff7828; 
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link:hover::after {
-    width: 100%;
-}
-
-
-
-
-/* Custom Desktop Link Styling */
-.nav-link {
-    @apply text-sm font-['Space_Mono'] font-medium text-white/70 hover:text-orange-500 transition-colors uppercase tracking-widest;
+#mobile-menu h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    color: black;
+    letter-spacing: -1px;
 }
 
 /* High-Impact Mobile Links */
 .mobile-link {
-    @apply text-6xl font-black text-black uppercase tracking-tighter transition-all duration-300;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 5rem; 
+    font-weight: 900;
+    color: black;
+    text-transform: uppercase;
+    line-height: 0.9;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: -2px;
+    text-decoration: none;
+    display: block;
 }
 
 .mobile-link:hover {
-    @apply italic translate-x-3;
+    font-style: italic;
+    transform: translateX(12px);
+    color: rgba(0, 0, 0, 0.6); 
+}
+
+/* EXPLORE Watermark */
+.explore-watermark {
+    font-family: 'Bebas Neue', sans-serif;
+    color: rgba(0, 0, 0, 0.05); 
+    font-size: clamp(80px, 15vw, 140px);
+    font-weight: 900;
+}
+
+/* Desktop-only specific adjustment */
+@media (min-width: 768px) {
+    #navbar .max-w-7xl {
+        max-width: 100% !important; /* Forces the internal container to use full width */
+        width: 100%;
+    }
+}
+
+
+/* Styling for the new long Home Button text */
+.logo-full-text {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.5px;
+    /* Smooth transition for the hover color change */
+    transition: color 0.3s ease;
+}
+
+/* Ensure the header doesn't squash the text on medium screens */
+@media (max-width: 1024px) {
+    #navbar .nav-link {
+        gap: 1.5rem; /* Shrink gap between links if name is too long */
+        font-size: 0.75rem;
+    }
 }
