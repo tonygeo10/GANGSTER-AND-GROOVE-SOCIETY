@@ -18,7 +18,7 @@
 <body class="bg-black text-white font-['Outfit'] overflow-x-hidden">
     <div class="grain"></div>
 
- <header id="navbar" class="fixed top-0 w-full z-50 bg-black border-b border-white/5 h-20">
+<header id="navbar" class="fixed top-0 w-full z-50 bg-black border-b border-white/5 h-20">
     <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
         
         <div class="flex items-center gap-3">
@@ -33,7 +33,31 @@
             <a href="games.html" class="nav-link">Games</a>
             <a href="street-stories.html" class="nav-link">Street Stories</a>
         </nav>
-        
+
+        <button id="menu-btn" class="md:hidden text-white p-2 focus:outline-none">
+            <i data-lucide="menu" class="w-8 h-8"></i>
+        </button>
+    </div>
+
+    <div id="menu-overlay" class="hidden fixed inset-0 bg-black/80 backdrop-blur-md z-[60] transition-opacity duration-300 opacity-0"></div>
+
+    <div id="mobile-menu" class="fixed inset-y-0 right-0 w-full bg-[#d4ff70] transform translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] z-[70] flex flex-col overflow-hidden">
+        <div class="flex items-center justify-between p-8">
+            <span class="font-mono font-bold text-black uppercase tracking-widest">Navigation</span>
+            <button id="close-menu" class="w-12 h-12 rounded-full border border-black/20 flex items-center justify-center text-black hover:bg-black hover:text-[#d4ff70] transition-all">
+                <i data-lucide="x" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <nav class="flex flex-col px-8 mt-10 gap-4">
+            <a href="music.html" class="mobile-link">Music</a>
+            <a href="games.html" class="mobile-link">Games</a>
+            <a href="street-stories.html" class="mobile-link">Street Stories</a>
+        </nav>
+
+        <div class="mt-auto pointer-events-none select-none">
+            <h2 class="text-[140px] font-black text-black/5 leading-none -mb-8 -ml-4 whitespace-nowrap uppercase">Explore</h2>
+        </div>
     </div>
 </header>
 
