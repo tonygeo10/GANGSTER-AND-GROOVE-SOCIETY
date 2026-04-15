@@ -13,7 +13,7 @@
 </head>
 <body class="bg-black text-white">
 
- <header id="navbar" class="fixed top-0 w-full z-50 bg-black border-b border-white/5 h-20">
+<header id="navbar" class="fixed top-0 w-full z-50 bg-black border-b border-white/5 h-20">
     <div class="w-full px-12 h-full flex items-center justify-between">
         
         <div class="flex items-center">
@@ -40,6 +40,23 @@
         
     </div>
 </header>
+
+<div id="menu-overlay" class="hidden fixed inset-0 bg-black/60 z-[60] transition-opacity duration-300"></div>
+<div id="mobile-menu" class="fixed inset-y-0 right-0 w-full bg-[#ff7828] transform translate-x-full transition-transform duration-500 z-[70] flex flex-col md:hidden">
+    <div class="flex justify-between p-8">
+        <h1 class="font-['Bebas_Neue'] text-3xl text-black leading-none">
+            GANGSTER AND<br>GROOVE SOCIETY
+        </h1>
+        <button id="close-menu">
+            <i data-lucide="x" class="text-black w-8 h-8"></i>
+        </button>
+    </div>
+    <nav class="flex flex-col px-8 gap-4">
+        <a href="music.html" class="mobile-link">Music</a>
+        <a href="games.html" class="mobile-link">Games</a>
+        <a href="street-stories.html" class="mobile-link">Street Stories</a>
+    </nav>
+</div>
 
 <div id="menu-overlay" class="hidden fixed inset-0 bg-black/60 z-[60] transition-opacity duration-300"></div>
 <div id="mobile-menu" class="fixed inset-y-0 right-0 w-full bg-[#ff7828] transform translate-x-full transition-transform duration-500 z-[70] flex flex-col md:hidden">
