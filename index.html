@@ -1,9 +1,9 @@
-<!doctype html>
+ <!doctype html>
 <html lang="el" class="h-full">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GNG Society | Gangster & Groove</title>
+    <title> Gangster & Groove  | Gangster & Groove Society</title>
     
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
@@ -14,53 +14,50 @@
     <link rel="stylesheet" href="css/articles.css">
     <link rel="stylesheet" href="css/footer.css">
 </head>
-
-<body class="bg-black text-white font-['Outfit'] overflow-x-hidden">
-    <div class="grain"></div>
-
 <header id="navbar" class="fixed top-0 w-full z-50 bg-black border-b border-white/5 h-20">
-    <div class="max-w-7xl mx-auto px-6 h-full flex items-center justify-between">
+    <div class="w-full px-12 h-full flex items-center justify-between">
         
-        <div class="flex items-center gap-3">
-            <a href="index.html" class="flex items-center gap-3 group transition-transform duration-200 active:scale-95">
-                <img src="images/ggslogo.jpg" alt="GNG Logo" class="w-10 h-10 object-cover rounded-sm border border-white/10 group-hover:border-orange-500/50 transition-colors">
-                <span class="font-['Space_Mono'] font-bold tracking-tighter text-lg text-white group-hover:text-orange-500 transition-colors">GNG SOCIETY</span>
+        <div class="flex items-center">
+            <a href="index.html" class="flex items-center gap-4 group transition-transform duration-200 active:scale-95">
+                <img src="images/ggslogo.jpg" alt="GNG Logo" class="w-10 h-10 object-cover rounded-sm border border-white/10 group-hover:border-[#ff7828]/50 transition-colors">
+                
+                <div class="flex flex-col leading-none">
+                    <span class="font-['Bebas_Neue'] text-xl md:text-2xl text-white group-hover:text-[#ff7828] transition-colors tracking-tight uppercase">
+                        GANGSTER AND GROOVE SOCIETY
+                    </span>
+                </div>
             </a>
         </div>
 
-        <nav class="hidden md:flex items-center gap-8">
+        <nav class="hidden md:flex items-center gap-12">
             <a href="music.html" class="nav-link">Music</a>
             <a href="games.html" class="nav-link">Games</a>
             <a href="street-stories.html" class="nav-link">Street Stories</a>
         </nav>
 
-        <button id="menu-btn" class="md:hidden text-white p-2 focus:outline-none">
+        <button id="menu-btn" class="md:hidden text-white hover:text-[#ff7828] transition-colors p-2">
             <i data-lucide="menu" class="w-8 h-8"></i>
         </button>
-    </div>
-
-    <div id="menu-overlay" class="hidden fixed inset-0 bg-black/80 backdrop-blur-md z-[60] transition-opacity duration-300 opacity-0"></div>
-
-    <div id="mobile-menu" class="fixed inset-y-0 right-0 w-full bg-[#d4ff70] transform translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.4,0,0.2,1)] z-[70] flex flex-col overflow-hidden">
-        <div class="flex items-center justify-between p-8">
-            <span class="font-mono font-bold text-black uppercase tracking-widest">Navigation</span>
-            <button id="close-menu" class="w-12 h-12 rounded-full border border-black/20 flex items-center justify-center text-black hover:bg-black hover:text-[#d4ff70] transition-all">
-                <i data-lucide="x" class="w-6 h-6"></i>
-            </button>
-        </div>
-
-        <nav class="flex flex-col px-8 mt-10 gap-4">
-            <a href="music.html" class="mobile-link">Music</a>
-            <a href="games.html" class="mobile-link">Games</a>
-            <a href="street-stories.html" class="mobile-link">Street Stories</a>
-        </nav>
-
-        <div class="mt-auto pointer-events-none select-none">
-            <h2 class="text-[140px] font-black text-black/5 leading-none -mb-8 -ml-4 whitespace-nowrap uppercase">Explore</h2>
-        </div>
+        
     </div>
 </header>
 
+<div id="menu-overlay" class="hidden fixed inset-0 bg-black/60 z-[60] transition-opacity duration-300"></div>
+<div id="mobile-menu" class="fixed inset-y-0 right-0 w-full bg-[#ff7828] transform translate-x-full transition-transform duration-500 z-[70] flex flex-col md:hidden">
+    <div class="flex justify-between p-8">
+        <h1 class="font-['Bebas_Neue'] text-3xl text-black leading-none">
+            GANGSTER AND<br>GROOVE SOCIETY
+        </h1>
+        <button id="close-menu">
+            <i data-lucide="x" class="text-black w-8 h-8"></i>
+        </button>
+    </div>
+    <nav class="flex flex-col px-8 gap-4">
+        <a href="music.html" class="mobile-link">Music</a>
+        <a href="games.html" class="mobile-link">Games</a>
+        <a href="street-stories.html" class="mobile-link">Street Stories</a>
+    </nav>
+</div>
 
 </section>
   <section class="relative bg-black w-full overflow-hidden">
@@ -201,7 +198,7 @@
 </footer>
 
     <script src="script.js"></script>
-    
+    <script src="hamburger.js"></script>
     
 </body>
 </html>
