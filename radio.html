@@ -1,0 +1,461 @@
+ <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Gangster & Groove  | Gangster & Groove Society</title>
+    
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Sora:wght@400;700&family=Outfit:wght@300;400;600&family=Space+Mono&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/articles.css">
+    <link rel="stylesheet" href="css/footer.css">
+     <script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260925-05-46ec85d","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YACgEZulLoA,0","Arial Narrow":"YAGyDvJ_4Ts,0","Arial Rounded MT Bold":"YAFcfoaHu-s,0","Arial":"YAGyDvJ_4Ts,0","Avenir Next":"YAFcfmNq6UY,0","Baloo 2":"YADK30bC6HQ,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,1","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAFcfvtOAUY,1","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","Courier Prime":"YAD1aFjegN8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAFdJpU7Kkk,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHQutsX00Q,0","Hanken Grotesk":"YAFcfhwp99E,0","Helvetica Neue":"YAFcf6CtJfI,0","Helvetica":"YAFcf6CtJfI,0","IBM Plex Mono":"YAFdJkmvhGI,0","Impact":"YAFcfnjI7Vk,0","Instrument Serif":"YAHFeOnZNEk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YADK3zbC6RM,0","JetBrains Mono":"YAFdJksXcAk,0","Josefin Sans":"YAFdJjvw9Ps,0","Lato":"YAFdJuFCnaw,0","Libre Baskerville":"YACgEUFdPdA,0","Lobster":"YAD8SnSjSFI,0","Lora":"YACgEXvxf8Q,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YAFdtQi73Xs,0","Nunito":"YAFdJoNRMmU,1","Oleo Script":"YACgEQQ14jI,0","Oswald":"YACgEQY10lw,0","Pacifico":"YADLjORQ1u4,0","Phantom Sans":"YAFdJvgJ5TU,0","Playfair Display":"YAFdJhem5V8,1","Plus Jakarta Sans":"YAGvf3_u0_Q,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YAFdJpYtCxE,1","Raleway":"YAFdJhmxbVQ,1","Roboto Slab":"YAFdJswIKAg,0","Rockwell":"YAFcfyVZnN0,0","Rye":"YACgEdQP21k,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Source Serif 4":"YACgEfdj394,0","Space Grotesk":"YADZ-dYEmhg,0","Space Mono":"YADW1-vpsoc,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","UV Display":"YAEdVfSSpYo,0","UV Sans":"YAFdJvgJ5TU,0","Ubuntu":"YACgERDU--Q,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YAD1aFjegN8,0","ui-sans-serif":"YACkoD1yZN0,0"}}');</script>
+  <script src="/_sdk/6542d56fbfe7a3eb.telemetry_sdk.js" integrity="sha512-ECdM0nK7EkwDuOqho2qxgyRQXyBHk9hZqRKMBr+Xsu6zjeHlt+qkO2N2YRiHN7Kg4e1fEHDhjIp4bGJYVypv1g=="></script>
+   
+  <style>
+    :root { --ink:#0b0b0d; --panel:#141418; --line:#26262d; --accent:#d4ff3a; --red:#ff3b30; --muted:#9a9aa6; }
+    html, body { width:100%; min-height: 100vh; margin: 0; background: rgb(11, 11, 13); color: #f4f4f5; }
+    body { font-family:'DM Sans',sans-serif; }
+    .font-display { font-family:'Eczar',serif; }
+    .font-mono-x { font-family:'Space Mono',monospace; }
+    .grain { background-image: radial-gradient(rgba(255,255,255,.035) 1px, transparent 1px); background-size: 4px 4px; }
+    :focus-visible { outline:2px solid var(--accent); outline-offset:3px; border-radius:6px; }
+    .ticker-wrap { overflow:hidden; mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent); }
+    .ticker-track { display:inline-flex; gap:3rem; white-space:nowrap; animation: tick 14s linear infinite; animation-play-state: paused; }
+    .is-playing .ticker-track { animation-play-state: running; }
+    @keyframes tick { from{transform:translateX(0)} to{transform:translateX(-50%)} }
+    .onair-dot { width:8px; height:8px; border-radius:50%; background:var(--red); }
+    .is-playing .onair-pill { box-shadow: 0 0 0 0 rgba(255,59,48,.6); animation: pulse 1.6s infinite; }
+    @keyframes pulse { 70%{box-shadow:0 0 0 10px rgba(255,59,48,0)} 100%{box-shadow:0 0 0 0 rgba(255,59,48,0)} }
+    .eq span { display:block; width:3px; height:4px; background:var(--accent); border-radius:2px; transition:height .2s; }
+    .is-playing .eq span { animation: eq .9s ease-in-out infinite; }
+    .eq span:nth-child(2){animation-delay:.2s} .eq span:nth-child(3){animation-delay:.4s} .eq span:nth-child(1){animation-delay:.1s}
+    @keyframes eq { 0%,100%{height:4px} 50%{height:18px} }
+    .play-btn { transition: transform .15s ease, box-shadow .2s ease; }
+    .play-btn:hover { transform: scale(1.05); box-shadow: 0 0 24px rgba(212,255,58,.35); }
+    input[type=range].vol { -webkit-appearance:none; appearance:none; height:4px; border-radius:4px; background:linear-gradient(90deg,var(--accent) var(--p,70%), #33333b var(--p,70%)); }
+    input[type=range].vol::-webkit-slider-thumb { -webkit-appearance:none; width:16px; height:16px; border-radius:50%; background:#fff; border:3px solid var(--accent); cursor:pointer; }
+    input[type=range].vol::-moz-range-thumb { width:12px; height:12px; border-radius:50%; background:#fff; border:3px solid var(--accent); cursor:pointer; }
+  </style>
+  <script src="https://cdn.tailwindcss.com/3.4.17" type="text/javascript"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js" type="text/javascript"></script>
+  <script src="https://w.soundcloud.com/player/api.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <!-- Header Navigation -->
+  <header id="navbar" class="fixed top-0 w-full z-50 bg-black border-b border-white/5 h-20">
+      <div class="w-full px-12 h-full flex items-center justify-between">
+          
+          <div class="flex items-center">
+              <a href="index.html" class="flex items-center gap-4 group transition-transform duration-200 active:scale-95">
+                  <img src="images/ggslogo.jpg" alt="GNG Logo" class="w-10 h-10 object-cover rounded-sm border border-white/10 group-hover:border-[#ff7828]/50 transition-colors">
+                  
+                  <div class="flex flex-col leading-none">
+                      <span class="font-['Bebas_Neue'] text-xl md:text-2xl text-white group-hover:text-[#ff7828] transition-colors tracking-tight uppercase">
+                          GANGSTER AND GROOVE SOCIETY
+                      </span>
+                  </div>
+              </a>
+          </div>
+
+          <!-- Desktop Menu -->
+          <nav class="hidden md:flex items-center gap-12">
+              <a href="music.html" class="nav-link">Music</a>
+              <a href="games.html" class="nav-link">Games</a>
+              <a href="cinema.html" class="nav-link">Cinema</a>
+              <a href="street-stories.html" class="nav-link">Street Stories</a>
+
+              <a href="radio.html" class="flex items-center gap-2 bg-[#ff7828] text-black font-['Bebas_Neue'] text-xl px-5 py-2 hover:bg-white hover:scale-105 transition-all shadow-[0_0_15px_rgba(255,120,40,0.3)]">
+                  <i data-lucide="radio" class="w-5 h-5"></i>
+                  GGS RADIO
+              </a>
+          </nav>
+
+          <!-- Mobile Menu Button -->
+          <button id="menu-btn" class="md:hidden text-white hover:text-[#ff7828] transition-colors p-2">
+              <i data-lucide="menu" class="w-8 h-8"></i>
+          </button>
+          
+      </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="menu-overlay" class="hidden fixed inset-0 bg-black/60 z-[60] transition-opacity duration-300"></div>
+
+  <!-- Mobile Menu Slide-out -->
+  <div id="mobile-menu" class="fixed inset-y-0 right-0 w-full bg-[#ff7828] transform translate-x-full transition-transform duration-500 z-[70] flex flex-col md:hidden">
+      <div class="flex justify-between p-8">
+          <h1 class="font-['Bebas_Neue'] text-3xl text-black leading-none">
+              GANGSTER AND<br>GROOVE SOCIETY
+          </h1>
+          <button id="close-menu">
+              <i data-lucide="x" class="text-black w-8 h-8"></i>
+          </button>
+      </div>
+      
+      <nav class="flex flex-col px-8 gap-4">
+          <a href="music.html" class="mobile-link">Music</a>
+          <a href="games.html" class="mobile-link">Games</a>
+          <a href="cinema.html" class="mobile-link">Cinema</a>
+          <a href="street-stories.html" class="mobile-link">Street Stories</a>
+
+          <a href="radio.html" class="flex items-center justify-center gap-2 bg-black text-[#ff7828] font-['Bebas_Neue'] text-3xl px-5 py-4 mt-6 hover:bg-white hover:text-black transition-colors shadow-xl">
+              <i data-lucide="radio" class="w-7 h-7"></i>
+              GGS RADIO
+          </a>
+      </nav>
+  </div>
+
+  <!-- Main Workspace -->
+  <main class="w-full max-w-2xl mx-auto px-4 py-10 flex-1 flex flex-col items-center justify-center space-y-6 mt-16">
+    <!-- Hidden SoundCloud Player for Streaming -->
+    <iframe id="soundcloud-player" src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/user-305200711/sets/greek-trap-mysic&auto_play=false&show_artwork=false" allow="autoplay; encrypted-media" class="hidden"></iframe>
+
+    <div class="bg-[#141418] border border-[#26262d] rounded-3xl p-6 md:p-8 shadow-2xl w-full space-y-6 text-center">
+      
+      <!-- Current Song Photo & Info -->
+      <div class="flex flex-col sm:flex-row items-center gap-5 text-left bg-[#0b0b0d]/60 border border-[#26262d] p-4 rounded-2xl">
+        <div id="artwork-container" class="w-24 h-24 rounded-xl bg-[#26262d] border border-[#3a3a44] overflow-hidden shrink-0 grid place-items-center text-[#d4ff3a] relative shadow-md">
+          <img id="current-artwork" src="" alt="Album Art" class="w-full h-full object-cover hidden">
+          <div id="artwork-placeholder">
+            <i data-lucide="music" style="width:32px;height:32px"></i>
+          </div>
+        </div>
+        <div class="flex-1 min-w-0 text-center sm:text-left">
+          <span class="text-[#d4ff3a] font-mono-x text-[10px] uppercase tracking-widest block">Now Playing</span>
+          <h1 id="main-title" class="font-display text-xl font-bold text-white mt-1 truncate">Greek Songs Collection</h1>
+          <p id="main-artist" class="text-xs text-[#9a9aa6] mt-1 truncate">Press play to stream. Previews are auto-skipped ⚡</p>
+        </div>
+      </div>
+
+      <!-- Playback Controls -->
+      <button id="main-play-btn" class="w-full flex items-center justify-center gap-3 bg-[#d4ff3a] hover:bg-[#bfee28] text-black font-bold py-4 rounded-xl transition-all shadow-[0_0_20px_rgba(212,255,58,0.2)] hover:shadow-[0_0_30px_rgba(212,255,58,0.4)]">
+        <i data-lucide="shuffle" style="width:20px;height:20px"></i>
+        <span id="main-play-text">Play Random Song</span>
+      </button>
+    </div>
+
+    <!-- Last 5 Songs Section -->
+    <div class="bg-[#141418] border border-[#26262d] rounded-2xl p-5 w-full space-y-3">
+      <div class="flex items-center justify-between">
+        <h2 class="font-display text-sm font-bold text-white flex items-center gap-2">
+          <i data-lucide="history" style="width:16px;height:16px" class="text-[#d4ff3a]"></i>
+          Last Played Songs
+        </h2>
+        <span class="text-[10px] font-mono-x text-[#9a9aa6] uppercase">History (Max 5)</span>
+      </div>
+      <div id="recent-tracks-list" class="space-y-2">
+        <p class="text-xs text-[#9a9aa6] py-2 text-center">Songs will appear here as they play.</p>
+      </div>
+    </div>
+
+    <!-- SoundCloud Disclaimer Notice -->
+    <div class="w-full bg-[#141418]/60 border border-[#26262d] rounded-2xl p-4 text-left text-xs text-[#9a9aa6] space-y-1 mb-20">
+      <p class="font-bold text-[#f4f4f5] flex items-center gap-1.5">
+        <i data-lucide="info" style="width:14px;height:14px" class="text-[#d4ff3a]"></i>
+        SoundCloud® Disclaimer & Attribution
+      </p>
+      <p>This application utilizes the official SoundCloud Widget API for streaming audio content. All tracks, titles, artwork, and trademarks remain the intellectual property of their respective copyright owners and creators hosted on SoundCloud.</p>
+    </div>
+  </main>
+
+  <!-- Persistent Bottom Audio Player Bar -->
+  <aside id="player" aria-label="Radio player" class="fixed bottom-0 left-0 right-0 z-50 border-t border-[#26262d] backdrop-blur px-4 py-3" style="background: rgba(20, 20, 24, 0.95);">
+    <div class="max-w-5xl mx-auto flex flex-wrap md:flex-nowrap items-center gap-x-5 gap-y-3">
+      <button id="play-toggle" type="button" aria-pressed="false" aria-label="Play stream" class="play-btn shrink-0 flex items-center gap-2 pl-3 pr-5 h-12 rounded-full bg-[#d4ff3a] text-black font-bold cursor-pointer">
+        <span class="w-8 h-8 rounded-full bg-black text-[#d4ff3a] grid place-items-center">
+          <span id="icon-play"><i data-lucide="play" style="width:16px;height:16px"></i></span>
+          <span id="icon-pause" class="hidden"><i data-lucide="pause" style="width:16px;height:16px"></i></span>
+        </span>
+        <span id="toggle-btn-label">Play</span>
+      </button>
+
+      <div class="onair-pill shrink-0 flex items-center gap-2 px-3 py-1.5 rounded-full border border-[#ff3b30]/50 bg-[#ff3b30]/10" role="status">
+        <span class="onair-dot"></span>
+        <span class="font-mono-x uppercase" style="color: rgb(255, 107, 97); font-weight: 700; font-size: 11px; letter-spacing: 0.1rem;">ON AIR 🔴</span>
+      </div>
+
+      <div class="eq flex items-end gap-[3px] h-5 shrink-0" aria-hidden="true">
+        <span></span><span></span><span></span><span></span>
+      </div>
+
+      <div class="ticker-wrap flex-1 min-w-[140px]" aria-live="off">
+        <div class="ticker-track">
+          <span id="ticker-text" class="font-mono-x text-white text-sm">GNG Radio — Greek Songs Shuffle Station (Active Live Stream)</span>
+          <span id="ticker-text-clone" class="font-mono-x text-[#9a9aa6] text-sm" aria-hidden="true">GNG Radio — Greek Songs Shuffle Station (Active Live Stream)</span>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3 shrink-0 ml-auto">
+        <i data-lucide="volume-2" class="text-[#9a9aa6]" style="width:18px;height:18px" aria-hidden="true"></i>
+        <label for="volume" class="sr-only">Volume</label>
+        <input id="volume" type="range" min="0" max="100" value="70" class="vol w-24 md:w-32" aria-valuetext="70%">
+        <span id="volume-value" class="font-mono-x w-10 text-right text-xs" style="color: rgb(212, 255, 58);" aria-hidden="true">70%</span>
+      </div>
+    </div>
+  </aside>
+ 
+ <!-- Script Engine -->
+ <script>
+    lucide.createIcons();
+  
+    const iframe = document.getElementById('soundcloud-player');
+    const widget = SC.Widget(iframe);
+  
+    const playerEl = document.getElementById('player');
+    const toggleBtn = document.getElementById('play-toggle');
+    const toggleBtnLabel = document.getElementById('toggle-btn-label');
+    const mainPlayBtn = document.getElementById('main-play-btn');
+    const mainPlayText = document.getElementById('main-play-text');
+    const iconPlay = document.getElementById('icon-play');
+    const iconPause = document.getElementById('icon-pause');
+    const volInput = document.getElementById('volume');
+    const volOut = document.getElementById('volume-value');
+    const mainTitle = document.getElementById('main-title');
+    const mainArtist = document.getElementById('main-artist');
+    const currentArtworkImg = document.getElementById('current-artwork');
+    const artworkPlaceholder = document.getElementById('artwork-placeholder');
+    const tickerText = document.getElementById('ticker-text');
+    const tickerClone = document.getElementById('ticker-text-clone');
+    const recentTracksList = document.getElementById('recent-tracks-list');
+  
+    let isPlaying = false;
+    let hasInitialized = false;
+    let recentTracks = [];
+    let playlistSounds = [];
+    let validIndices = []; // Stores indices of tracks >= 60 seconds
+    let currentIndex = 0;
+  
+    widget.bind(SC.Widget.Events.READY, () => {
+      widget.setVolume(70);
+      widget.getSounds((sounds) => {
+        if (sounds && sounds.length > 0) {
+          playlistSounds = sounds;
+          validIndices = [];
+          
+          // Scan the entire playlist BEFORE playback to find tracks >= 60 seconds (60000ms)
+          sounds.forEach((sound, index) => {
+            if (sound.duration >= 60000) {
+              validIndices.push(index);
+            }
+          });
+  
+          // Fallback in the rare case no tracks are long enough
+          if (validIndices.length === 0) {
+            validIndices = sounds.map((_, idx) => idx);
+          }
+        }
+      });
+    });
+  
+    widget.bind(SC.Widget.Events.PLAY, () => {
+      widget.getCurrentSound((s) => {
+        console.log('[GGS RADIO] PLAY event. index=', currentIndex, 'title=', s && s.title, 'duration_ms=', s && s.duration, 'streamable=', s && s.streamable, 'policy=', s && s.policy);
+      });
+      setPlaying(true);
+      updateTrackInfo();
+    });
+  
+    widget.bind(SC.Widget.Events.PAUSE, () => {
+      widget.getPosition((pos) => {
+        console.log('[GGS RADIO] PAUSE event. position_ms=', pos);
+      });
+      setPlaying(false);
+    });
+  
+    // Automatically queue another random valid song when the current track finishes
+    widget.bind(SC.Widget.Events.FINISH, () => {
+      widget.getPosition((pos) => {
+        console.log('[GGS RADIO] FINISH event fired at position_ms=', pos, '-- picking a new random track');
+      });
+      playRandomValidTrack();
+    });
+  
+    function setPlaying(playing) {
+      isPlaying = playing;
+      playerEl.classList.toggle('is-playing', isPlaying);
+      toggleBtn.setAttribute('aria-pressed', isPlaying);
+      iconPlay.classList.toggle('hidden', isPlaying);
+      iconPause.classList.toggle('hidden', !isPlaying);
+      toggleBtnLabel.textContent = isPlaying ? "Pause" : "Play";
+      mainPlayText.textContent = isPlaying ? "Pause Playback" : "Play Random Song";
+      lucide.createIcons();
+    }
+  
+    function playRandomValidTrack() {
+      if (validIndices.length > 0) {
+        // Pick randomly ONLY from the pre-filtered valid indices
+        const randPos = Math.floor(Math.random() * validIndices.length);
+        currentIndex = validIndices[randPos];
+        widget.skip(currentIndex);
+        ensurePlayback();
+      } else if (playlistSounds.length > 0) {
+        // Emergency fallback
+        currentIndex = Math.floor(Math.random() * playlistSounds.length);
+        widget.skip(currentIndex);
+        ensurePlayback();
+      } else {
+        widget.play();
+      }
+    }
+
+    // skip() normally starts playback on its own. This is a SINGLE fallback nudge,
+    // not a loop -- calling play() repeatedly while an earlier play() promise is
+    // still pending makes the browser abort it and pause the track (this was the
+    // actual bug: our own retries were interrupting real, valid playback).
+    function ensurePlayback() {
+      setTimeout(() => {
+        widget.isPaused((paused) => {
+          if (paused) {
+            console.log('[GGS RADIO] still paused after skip, nudging play() once');
+            widget.play();
+          }
+        });
+      }, 600);
+    }
+  
+    // Main play button always forces a new shuffle
+    mainPlayBtn.addEventListener('click', () => {
+      hasInitialized = true;
+      playRandomValidTrack();
+    });
+  
+    // Bottom bar toggle pauses/resumes if already started, otherwise shuffles
+    toggleBtn.addEventListener('click', () => {
+      widget.isPaused((paused) => {
+        if (paused) {
+          if (!hasInitialized) {
+            hasInitialized = true;
+            playRandomValidTrack();
+          } else {
+            widget.play(); // Simply resume without shuffling
+          }
+        } else {
+          widget.pause();
+        }
+      });
+    });
+  
+    volInput.addEventListener('input', (e) => {
+      const val = e.target.value;
+      widget.setVolume(val);
+      volInput.style.setProperty('--p', val + '%');
+      volOut.textContent = val + '%';
+    });
+  
+    function updateTrackInfo() {
+      widget.getCurrentSound((sound) => {
+        if (sound) {
+          // SAFETY NET: If a short track somehow slipped in, skip immediately before updating UI
+          if (sound.duration > 0 && sound.duration < 60000) {
+            console.warn("Safety net caught a short track. Skipping immediately.");
+            playRandomValidTrack();
+            return;
+          }
+  
+          const title = sound.title || "Greek Songs Collection";
+          const artist = sound.user ? sound.user.username : "SoundCloud Creator";
+          
+          let artwork = sound.artwork_url || (sound.user ? sound.user.avatar_url : '');
+          if (artwork) {
+            artwork = artwork.replace('-large', '-t500x500');
+          }
+  
+          mainTitle.textContent = title;
+          mainArtist.textContent = artist;
+  
+          if (artwork) {
+            currentArtworkImg.src = artwork;
+            currentArtworkImg.classList.remove('hidden');
+            artworkPlaceholder.classList.add('hidden');
+          } else {
+            currentArtworkImg.classList.add('hidden');
+            artworkPlaceholder.classList.remove('hidden');
+          }
+  
+          const tickerStr = `GNG Radio — Now Playing: ${title} by ${artist} (Random Shuffle Active)`;
+          tickerText.textContent = tickerStr;
+          tickerClone.textContent = tickerStr;
+  
+          if (recentTracks.length === 0 || recentTracks[0].title !== title) {
+            recentTracks.unshift({ title, artist, artwork });
+            if (recentTracks.length > 5) {
+              recentTracks.pop();
+            }
+            renderRecentTracks();
+          }
+        }
+      });
+    }
+  
+    function renderRecentTracks() {
+      if (!recentTracks.length) {
+        recentTracksList.innerHTML = '<p class="text-xs text-[#9a9aa6] py-2 text-center">Songs will appear here as they play.</p>';
+        return;
+      }
+  
+      recentTracksList.innerHTML = recentTracks.map((t, idx) => `
+        <div class="flex items-center gap-3 p-2.5 rounded-xl bg-[#0b0b0d]/50 border border-[#26262d] ${idx === 0 ? 'border-[#d4ff3a]/40 bg-[#d4ff3a]/5' : ''}">
+          <div class="w-10 h-10 rounded-lg bg-[#26262d] overflow-hidden shrink-0 grid place-items-center text-[#9a9aa6]">
+            ${t.artwork ? `<img src="${t.artwork}" class="w-full h-full object-cover" alt="Art">` : '<i data-lucide="music" style="width:16px;height:16px"></i>'}
+          </div>
+          <div class="flex-1 min-w-0 text-left">
+            <p class="text-xs font-bold text-white truncate">${t.title}</p>
+            <p class="text-[11px] text-[#9a9aa6] truncate">${t.artist}</p>
+          </div>
+          ${idx === 0 ? '<span class="text-[10px] font-mono-x px-2 py-0.5 rounded bg-[#d4ff3a]/20 text-[#d4ff3a] shrink-0">PLAYING</span>' : '<span class="text-[10px] font-mono-x text-[#9a9aa6] shrink-0">#' + (idx + 1) + '</span>'}
+        </div>
+      `).join('');
+      lucide.createIcons();
+    }
+ </script>
+ 
+ <footer class="footer mt-auto">
+     <div class="footer-content pb-24 md:pb-6">
+         <div class="footer-top">
+             <div class="footer-section brand-info">
+                 <h2>GNG SOCIETY</h2>
+                 <p>Gangster & Groove Culture</p>
+             </div>
+             
+             <div class="footer-section">
+                 <div class="social-links">
+                     <a href="https://www.instagram.com/ggs_stories/" target="_blank" rel="noopener noreferrer" class="social-link">
+                         <i data-lucide="instagram"></i>
+                     </a>
+                     <a href="https://www.youtube.com/@GangsterandGrooveSociety" target="_blank" rel="noopener noreferrer" class="social-link">
+                         <i data-lucide="youtube"></i>
+                     </a>
+                     <a href="https://www.tiktok.com/@gngngrv_tv" target="_blank" rel="noopener noreferrer" class="social-link">
+                         <svg class="tiktok-icon" viewBox="0 0 24 24">
+                             <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z" />
+                         </svg>
+                     </a>
+                 </div>
+             </div>
+ 
+             <div class="footer-section contact-info">
+                 <a href="mailto:info@gngsociety.gr" class="contact-link">Contact Us</a>
+             </div>
+         </div>
+ 
+         <div class="footer-bottom">
+             <p>© 2024 GANGSTER & GROOVE SOCIETY. ALL RIGHTS RESERVED.</p>
+             <div class="footer-links">
+                 <a href="#">Privacy Policy</a>
+                 <a href="#">Terms of Service</a>
+             </div>
+         </div>
+     </div>
+ </footer>
+ 
+ <script src="script.js"></script>
+ <script src="hamburger.js"></script>
+     
+</body>
+</html>
